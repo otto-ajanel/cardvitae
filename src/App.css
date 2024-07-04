@@ -1,0 +1,65 @@
+.card{
+  width: 700px;
+  background-color: #dfdfdf;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  padding: 35px   ;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  width: 800px; 
+  height: 800px; 
+  background-color: #060606; 
+  border-radius: 50%;
+  top: 5%; 
+  left: 50%;
+  right: 0;
+  margin: auto;
+  animation: orbit 4s linear infinite;
+}
+strong{
+  color:rgb(226, 104, 10);
+}
+p{
+  position: absolute;
+  margin-top: -25px;
+  padding: 0;
+}
+.info{ 
+  position: relative;
+  margin: 0;
+  padding: 30px;
+}
+ul{
+  list-style: none;
+  padding: 15px;
+}
+li{
+  display: flex;
+  padding: 10px;
+  margin-top: 5px;
+}
+li .detail{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+@keyframes orbit {
+  0% {
+    top: 5%; 
+  left: 50%;
+  }
+  50% {
+    transform: translate(-50%, 0%) rotate(50deg) translateX(400px) rotate(-360deg);
+  }
+}
